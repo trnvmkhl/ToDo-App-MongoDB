@@ -45,15 +45,6 @@ const listSchema = new mongoose.Schema({
 
 const List = mongoose.model('List', listSchema);
 
-// Добавляем дефолтные значения в бд
-// Item.insertMany(defaultItems, (e) => {
-//   if (e) {
-//     console.log(e);
-//   } else {
-//     console.log('Saved your examples');
-//   }
-// });
-
 
 
 app.get("/", function(req, res) {
@@ -173,8 +164,3 @@ if (port == null || port == "") {
 app.listen(port, () => {
   console.log("Server started on port 3000");
 });
-
-
-// app.listen(process.env.PORT || 3000, function() {
-//   console.log("Server started on port 3000");
-// });
